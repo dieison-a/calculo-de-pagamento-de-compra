@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento da Compra</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="card">
+        <h1>Pagamento da Compra</h1>
+
+        <form action="calculaPagamento.php" method="post">
+            <label for="valorCompra">Valor da compra (R$):</label>
+            <input type="number" name="valorCompra" id="valorCompra" step="0.01" min="0" required />
+
+            <br /><br />
+
+            <p>Forma de pagamento:</p>
+
+            <span class="option">
+        <input type="radio" name="pagamento" id="avista" value="avista" required />
+        <label for="avista">À vista</label>
+      </span>
+
+            <span class="option">
+        <input type="radio" name="pagamento" id="aprazo" value="aprazo" />
+        <label for="aprazo">A prazo</label>
+      </span>
+
+            <br /><br />
+
+            <span class="option">
+        <input type="checkbox" name="visa" id="visa" value="sim" />
+        <label for="visa">Pagamento com cartão Visa</label>
+      </span>
+
+            <br /><br />
+
+            <input type="submit" value="Calcular" />
+
+            <input type="reset" value="Limpar" />
+        </form>
+    </main>
+</body>
+
+</html>
